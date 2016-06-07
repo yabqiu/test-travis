@@ -1,5 +1,10 @@
 language: java
-script: ls
+  
+script: 
+  ls
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - curl https://mobileservice.morningstar.com/service/version.txt 
+
+after_failure:
+  - echo "Ops"
