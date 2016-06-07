@@ -2,6 +2,7 @@ language: java
   
 script: 
   javac Test.java 
+  ls -l
 
 after_success:
   - curl https://mobileservice.morningstar.com/service/version.txt 
